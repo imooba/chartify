@@ -1,41 +1,7 @@
 {
   "name": "chartify",
-  "description": "React.js plugin for creating charts. Inspired by kinopoisk.ru chart. Feel free for contribute.",
-  "version": "1.0.4",
-  "main": "chartify.js",
-  "repository": "kirillstepkin/chartify",
-  "homepage": "github.com/kirillstepkin/chartify",
-  "keywords": [
-    "react",
-    "reactjs",
-    "react-js",
-    "react-chart",
-    "scale",
-    "items",
-    "dataset",
-    "kinopoisk",
-    "chart",
-    "line-chart",
-    "bar-chart",
-    "marks",
-    "axis",
-    "calendar-view",
-    "pyramid",
-    "progress-chart",
-    "showreel",
-    "visualisation",
-    "diagram",
-    "graph"
-  ],
-  "author": {
-    "name": "Kirill Stepkin",
-    "email": "kirillstyopkin@gmail.com",
-    "url": "github.com/kirillstepkin"
-  },
-  "bugs": {
-    "url": "https://github.com/kirillstepkin/chartify/issues", 
-    "email": "kirillstyopkin@gmail.com"
-  },
+  "version": "0.0.1",
+  "description": "chartify",
   "dependencies": {
     "autoprefixer": "^6.3.4",
     "autoprefixer-loader": "^3.2.0",
@@ -54,7 +20,9 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "chartify": "1.0.4",
+    "whatwg-fetch": "^1.0.0"
   },
   "license": "MIT"
 }
