@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f3901ca833848c0a6cae"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6a7146e15ec41833d2e6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -635,7 +635,7 @@
 				items: []
 			};
 
-			this.changeChart = function () {
+			this.refreshData = function () {
 				var items = _this.state.items;
 
 				var newItems = items.map(function (item) {
@@ -672,6 +672,12 @@
 					theme: themes[next]
 				});
 			};
+
+			this.toggleLine = function () {
+				_this.setState({
+					hasLine: _this.state.hasLine ? false : true
+				});
+			};
 		}
 
 		_createClass(App, [{
@@ -684,8 +690,9 @@
 							title: item["русскоязычное название"]
 						};
 					}),
-					boxSize: 16,
-					theme: 'purple'
+					boxSize: 20,
+					theme: 'purple',
+					hasLine: true
 				});
 			}
 		}, {
@@ -695,6 +702,7 @@
 				var items = _state.items;
 				var boxSize = _state.boxSize;
 				var theme = _state.theme;
+				var hasLine = _state.hasLine;
 
 				return _react2['default'].createElement(
 					'div',
@@ -705,21 +713,29 @@
 						width: 50,
 						height: 10,
 						boxSize: boxSize,
-						line: true,
+						line: hasLine,
 						theme: theme }),
 					_react2['default'].createElement(
 						'button',
 						{
 							type: 'button',
-							className: 'button',
-							onClick: this.changeChart },
-						'Change chart'
+							className: 'button one',
+							onClick: this.toggleLine },
+						'Toggle line'
 					),
 					_react2['default'].createElement(
 						'button',
 						{
 							type: 'button',
-							className: 'button',
+							className: 'button two',
+							onClick: this.refreshData },
+						'Refresh data'
+					),
+					_react2['default'].createElement(
+						'button',
+						{
+							type: 'button',
+							className: 'button three',
 							onClick: this.changeTheme },
 						'Change theme'
 					)
