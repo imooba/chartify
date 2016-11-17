@@ -6,12 +6,6 @@ body {
 	overflow: hidden;
 }
 
-.fork {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-}
-
 header {
 	height: 100px;
 	padding: 20px 0 0 0;
@@ -36,7 +30,24 @@ header.container > h4 {
 }
 
 main {
-	height: 500px;
+	height: 450px;
+}
+
+footer {
+	position: relative;
+}
+
+footer > div {
+	text-align: center;
+	font-family: 'Shrikhand', cursive;
+	color: rgba(216, 30, 164, 0.47);
+    font-size: 18px;
+	margin: 20px 0;
+}
+
+footer > div > a {
+	cursor: pointer;
+	color: rgba(22, 74, 144, 0.6);
 }
 
 .container {
@@ -78,4 +89,65 @@ main {
 
 .gh {
 	margin: 30px 0;
+}
+
+#forkongithub a {
+    background: #ae88ea;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 40px;
+    font-size: 1rem;
+    line-height: 2rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+#forkongithub a:hover {
+    background: #e82086;
+    color: #fff;
+}
+
+#forkongithub a::before,
+#forkongithub a::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 1px;
+    background: #fff;
+}
+
+#forkongithub a::after {
+    bottom: 1px;
+    top: auto;
+}
+
+@media screen and (min-width: 800px) {
+    #forkongithub {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 200px;
+        overflow: hidden;
+        height: 200px;
+        z-index: 9999;
+    }
+    #forkongithub a {
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        right: -60px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    }
 }
